@@ -2,10 +2,10 @@ import React from 'react';
 import { cn } from "../lib/utils";
 import BlurImage from './utils/BlurImage';
 import { Helmet } from 'react-helmet-async';
-
+import profile from "../assets/profile.jpg";
 const About = () => {
   return (
-    <section className="about-container relative flex min-h-[50rem] md:min-h-screen w-full items-center justify-center bg-black text-center py-20 px-4">
+    <section className="about-container relative flex min-h-[50rem] md:min-h-screen w-full items-center justify-center bg-black text-left py-20 px-4">
       <Helmet>
         <title>About Chaitanya Sai Meka | Full Stack Developer & AI Enthusiast</title>
         <meta name="description" content="Learn more about Chaitanya Sai Meka, a passionate full-stack developer with expertise in React, Node.js, AI/ML, UI/UX design, and entrepreneurial ventures. Discover my journey and goals." />
@@ -39,7 +39,7 @@ const About = () => {
         {/* Profile Image */}
         <div className="w-64 h-64 rounded-full overflow-hidden flex-shrink-0 border-4 border-neutral-800">
         <BlurImage
-          src="/profile_pic.png"
+          src={profile}
           blurhash="LAB._mEN5SkC-TNdofWX0hay}=WC"
           alt="Profile"
           className="w-full h-full"

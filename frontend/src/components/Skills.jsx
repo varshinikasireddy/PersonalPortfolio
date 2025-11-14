@@ -191,7 +191,7 @@ const Skills = () => {
 
       {/* Heading */}
       <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-center bg-gradient-to-b from-neutral-300 to-neutral-500 bg-clip-text text-transparent z-20 mb-4 sm:mb-6">
-        Tools in My Arsenal
+        Tech Stack & Skills
       </h2>
 
       {/* Prompts */}

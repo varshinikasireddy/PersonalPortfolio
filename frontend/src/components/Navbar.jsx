@@ -1,53 +1,106 @@
-import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const location = useLocation();
+  const [isVisible, setIsVisible] = useState(false);
 
   const links = [
-    { path: "/", label: "Home" },
-    { path: "/about", label: "About" },
-    { path: "/skills", label: "Skills" },
-    { path: "/projects", label: "Projects" },
-    { path: "/contact", label: "Contact" },
+    { id: "home", label: "Home" },
+    { id: "about", label: "About" },
+    { id: "skills", label: "Skills" },
+    { id: "projects", label: "Projects" },
+    { id: "education", label: "Education" },
+    { id: "contact", label: "Contact" },
   ];
 
-  return (
-    <nav id="nav-overall">
-      <div id="nav-div">
-        {links.map((link) => (
-          <Link
-            key={link.path}
-            to={link.path}
-            className={`nav-a
-              md:inline
-              ${location.pathname === link.path ? "hidden md:inline" : ""}
-            `}
-          >
-            {link.label}
-          </Link>
-        ))}
-      </div>
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
 
-      {/* Logbook Link */}
-      <div 
-        style={{ marginLeft: 'auto' }}
-        className="relative hidden md:flex items-center justify-center" 
-      >
-        <a
-          href="/logbook"
-          // target="_blank"
-          // rel="noopener noreferrer"
-          className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6  text-white inline-block">
-          <span className="absolute inset-0 overflow-hidden rounded-full">
-            <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-          </span>
-          <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10 ">
-            <span>Logbook</span>
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (id) => {
+    // If on resume page, navigate to home first
+    if (location.pathname === '/resume') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
+  const goToHome = () => {
+    if (location.pathname === '/resume') {
+      navigate('/');
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <>
+      {/* Top Navbar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/30 backdrop-blur-lg border-b border-white/10">
+        <div className="flex items-center gap-8 pl-2 sm:pl-4 md:pl-8 lg:pl-16 py-5">
+          {/* Left - Logo */}
+          <button 
+  onClick={goToHome} 
+  className="text-xl font-normal text-white hover:text-gray-300 transition-colors"
+>
+  &lt;VK.dev/&gt;
+</button>
+
+
+          {/* Books & Resume next to logo */}
+          <a 
+            href="#" 
+            className="text-white hover:text-gray-300 transition-colors text-lg font-normal"
+          >
+            Books
+          </a>
+          <button 
+            onClick={() => navigate('/resume')}
+            className="text-white hover:text-gray-300 transition-colors text-lg font-normal"
+          >
+            Resume
+          </button>
+        </div>
+      </nav>
+
+      {/* Side Navbar - Hidden on Resume page */}
+      {location.pathname !== '/resume' && (
+        <nav id="nav-overall" className={isVisible ? 'nav-visible' : ''}>
+          <div id="nav-div">
+            {links.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => scrollToSection(link.id)}
+                className="nav-a"
+              >
+                {link.label}
+              </button>
+            ))}
           </div>
-          <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
-        </a>
-      </div>
-    </nav>
+        </nav>
+      )}
+    </>
   );
 };
 

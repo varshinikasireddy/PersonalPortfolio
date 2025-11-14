@@ -10,71 +10,49 @@ import ProjectImage from "./utils/ProjectImage";
 
 const projects = [
   {
-    title: "Univa",
+    title: "Text2SQL AI Assistant",
     description:
-      "UNIVA — Document Search Platform",
-    link: "https://univa-ten.vercel.app/",
-    image: "/univa.png",
-    blurhash:"L1SPX|xvtn~q00t7_2Io00oe-pM|"
+      "Professional AI-powered chatbot that converts natural language to SQL queries with a sleek dark UI, voice input support, and real-time database interaction.",
+    link: "https://github.com/varshinikasireddy/text-to-sql",
+    image: "/text2sql.png",
+    blurhash:"L00000?b00Rj~qIU-;M{00M{M{of"
   },
   {
-    title: "Apple Website Clone",
+    title: "AI Chatbot",
     description:
-      "A modern, animated clone of the official Apple website made with smooth scroll and transitions.",
-    link: "https://apple-website-ecru-xi.vercel.app/",
-    image: "/Apple_website.png",
-    blurhash:"L02$Hd9Z00~pneofp0WB00?a~V01"
+      "Real-time NLP-based chatbot with React frontend deployed on Vercel for intelligent conversations.",
+    link: "#",
+    image: "/black_page.jpg",
+    blurhash:"L00SvEayWAfQozfQayfQayfQf8fQ"
   },
   {
-    title: "Movies Website",
+    title: "Automated Attendance System",
     description:
-      "Movie explorer website with sleek UI and live API integration.",
-    link: "https://movies-web-project-seven.vercel.app/",
-    image: "/Movies.png",
-    blurhash:"LACZ35PqnOi_T0X9a|WA00+FIpkW"
+      "Face recognition application with Streamlit dashboard for rural schools using OpenCV.",
+    link: "#",
+    image: "/black_page.jpg",
+    blurhash:"L00SvEayWAfQozfQayfQayfQf8fQ"
   },
   {
-    title: "To-Do App with Flask",
+    title: "EV Subscription Platform",
     description:
-      "Flask-powered backend with persistent task management frontend.",
-    link: "https://todo-with-flask-a93d.onrender.com/",
-    image: "/Task_Master.png",
-    blurhash:"L13l5O9F4n%MD%t7t7Rj00t7_3IU"
+      "Code4Change Hackathon project with GPS tracking and automated maintenance scheduling.",
+    link: "#",
+    image: "/black_page.jpg",
+    blurhash:"L00SvEayWAfQozfQayfQayfQf8fQ"
   },
   {
-    title: "Temperature Converter (JS)",
+    title: "E-commerce Platform",
     description:
-      "Interactive converter for Celsius/Fahrenheit using plain JavaScript.",
-    link: "https://chaitanyasai-meka.github.io/Temperature_Converter_JS/code/index.html",
-    image: "/Temperature.png",
-    blurhash:"L2QT1Z3C~Xtm00%EV[R.00erD}fP"
-  },
-  {
-    title: "Capstone Project (HTML/CSS)",
-    description:
-      "Final capstone web project showcasing HTML and CSS skills.",
-    link: "https://chaitanyasai-meka.github.io/Capstone_Project/",
-    image: "/Capstone.png",
-    blurhash:"LhLz?TRk~qoe-=azM{ay?cs.MxbH"
-  },
-  {
-    title: "Healthy Middle-Class India",
-    description: "Healthy Middle-Class India: Tackles obesity and lifestyle diseases with systemic solutions.",
-    link: "https://fste-chi.vercel.app",
-    image: "/fste.png",
-    blurhash:"L1NAoU3}MZPp004N019c00UDI89H"
-  },
-  {
-    title: "CYBERFICTION",
-    description: "Features smooth scrolling and logo animation using HTML, CSS, JS, Lenis, and GSAP. ",
-    link: "https://chaitanyasai-meka.github.io/CYBERFICTION/",
-    image: "/cyberfiction.png",
-     blurhash:"LbOzMcWB_NxuR*t7RjRjogWBM{fk"
+      "Full-stack e-commerce application for small sellers built during hackathon.",
+    link: "#",
+    image: "/black_page.jpg",
+    blurhash:"L00SvEayWAfQozfQayfQayfQf8fQ"
   },
   {
     title: "Coming Soon",
     description:
-      "Still in the oven. Can’t wait to serve it hot!",
+      "More exciting projects in development. Stay tuned!",
     link: "",
     image: "/black_page.jpg",
     blurhash:"L00SvEayWAfQozfQayfQayfQf8fQ"
@@ -192,7 +170,7 @@ const Projects = () => {
       </div>
       <div>
       <a 
-      href="https://github.com/ChaitanyaSai-Meka"
+      href="https://github.com/varshinikasireddy"
       target="_blank"
       rel="noopener noreferrer"
       className="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-base font-semibold leading-6  text-white inline-block">
