@@ -1,179 +1,7 @@
-import React, { useRef } from "react";
+import React from "react";
 import { cn } from "../lib/utils";
-import { CardSpotlight } from "./ui/card-spotlight";
-import {
-  FaReact,
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaPython,
-} from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
 
 const Skills = () => {
-  const colors = [
-    [138, 43, 226],  // Purple
-    [147, 112, 219], // Light Purple
-    [186, 85, 211],  // Medium Purple
-    [153, 50, 204],  // Dark Purple
-    [218, 112, 214], // Orchid
-    [221, 160, 221], // Plum
-    [216, 191, 216], // Thistle
-    [0, 105, 148],   // MySQL - Deep Blue
-    [56, 189, 248],  // Tailwind-like Sky Blue
-    [70, 130, 180],  // Postgresql
-    [57, 255, 20],   // Three.js - Neon Green
-    [30, 41, 59],    //Next.js - Slate Blue
-    [255, 0, 128],   // Framer Motion - Vibrant Pink
-    [0, 199, 255],   // Figma - Vivid Cyan/Blue
-    [104, 160, 99],  // Node.js - Medium Green
-    [51, 51, 51],    // Express.js - Dark Gray
-    [255, 136, 0],   // Postman - Bright Orange
-    [242, 101, 34],  // Java - Logo Orange
-    [0, 201, 167],   //React Native - Bright Teal 
-    [255, 166, 17], // Firebase - Dark Tangerine
-    [240, 81, 51],  // Swift - Vivid Orange
-    [36, 150, 237], // Docker - Blue
-  ];
-
-  const icons = [
-    <FaReact key="react" className="text-white text-xl" />,
-    <FaHtml5 key="html" className="text-white text-xl" />,
-    <FaCss3Alt key="css" className="text-white text-xl" />,
-    <FaJs key="js" className="text-white text-xl" />,
-    <SiTypescript key="ts" className="text-white text-xl" />,
-    <img
-      key="gsap"
-      src="/Gsap.png"
-      alt="Gsap"
-      className="w-9 h-9 p-1 object-contain"
-    />,
-    <FaPython key="Mysql" className="text-white text-xl" />,
-    <img
-      key="MySQL"
-      src="/mysql_logo.png"
-      alt="Mysql"
-      className="w-15 h-15 p-1 object-contain"
-    />,
-    <img
-      key="tailwind"
-      src="/tailwind.png"
-      alt="Tailwind"
-      className="w-9 h-9 p-1 object-contain"
-    />,
-    <img
-      key="postgresql"
-      src="/postgresql.png"
-      alt="Postgresql"
-      className="w-9 h-9 p-1 object-contain"
-    />,
-    <img
-      key="three-js-logo"
-      src="/three-js-logo.png"
-      alt="three.js"
-      className="w-9 h-9 p-1 object-contain"
-    />,
-    <img
-      key="next-js-logo"
-      src="/next.png"
-      alt="Next.js"
-      className="w-15 h-15 p-1 object-contain"
-    />,
-    <img
-      key="motion_logo"
-      src="/motion_logo().png"
-      alt="motion"
-      className="w-15 h-15 p-1 object-contain"
-    />,
-    <img
-      key="figma_logo"
-      src="/figma_logo.png"
-      alt="figma"
-      className="w-13 h-12 p-1 object-contain"
-    />,
-    <img
-      key="NodeJS_logo"
-      src="/NodeJS_Logo.png"
-      alt="NodeJS"
-      className="w-13 h-12 p-1 object-contain"
-    />,
-    <img
-      key="ExpressJS_logo"
-      src="/ExpressJS_Logo.png"
-      alt="ExpressJS"
-      className="w-16 h-11 p-1 object-contain"
-    />,
-    <img
-      key="Postman_Logo"
-      src="/Postman_Logo.png"
-      alt="Postman"
-      className="w-15 h-15 p-1 object-contain"
-    />,
-    <img
-      key="Java_Logo"
-      src="/Java_Logo.png"
-      alt="Java"
-      className="w-13 h-14 px-1 pb-1 object-contain"
-    />,
-    <img
-      key="React_Native_Logo"
-      src="/react_native_logo.png"
-      alt="React_Native"
-      className="w-11 h-12 px-1 pb-1 object-contain"
-    />,
-    <img
-      key="Firebase_Logo"
-      src="/firebase_logo.png"
-      alt="Firebase"
-      className="w-11 h-12 px-1 pb-1 object-contain"
-    />,
-    <img
-      key="Swift_Logo"
-      src="/swift_logo.png"
-      alt="Swift"
-      className="w-10 h-10 px-1 pb-1 object-contain"
-    />,
-    <img
-      key="Docker_Logo"
-      src="/docker_logo.png"
-      alt="Docker"
-      className="w-10 h-10 px-1 pb-1 object-contain"
-    />,
-  ];
-
-  const audioSources = [
-    "/e6-piano.mp3",
-    "/d6-piano.mp3",
-    "/b6-piano.mp3",
-    "/g6-piano.mp3",
-    "/f6-piano.mp3",
-    "/a6-piano.mp3",
-    "/c6-piano.mp3",
-    "/d6-piano.mp3",
-    "/e6-piano.mp3", 
-    "/a6-piano.mp3",
-    "/c6-piano.mp3",
-    "/g6-piano.mp3",
-    "/f6-piano.mp3",
-    "/a6-piano.mp3",
-    "/f6-piano.mp3",
-    "/g6-piano.mp3",
-    "/b6-piano.mp3",
-    "/e6-piano.mp3",
-    "/d6-piano.mp3",
-    "/b6-piano.mp3",
-    "/g6-piano.mp3",
-    "/d6-piano.mp3",
-  ];
-
-  const audioRefs = useRef([]);
-
-  const handleMouseEnter = (index) => {
-    const audio = new Audio(audioSources[index]);
-    audioRefs.current[index] = audio;
-    audio.play();
-  };
-
   return (
     <div className="relative min-h-screen w-full overflow-hidden flex flex-col items-center justify-center px-4 py-12 sm:py-20 bg-black">
       
@@ -190,38 +18,58 @@ const Skills = () => {
       <div className="absolute inset-0 z-10 pointer-events-none bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
 
       {/* Heading */}
-      <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-center bg-gradient-to-b from-neutral-300 to-neutral-500 bg-clip-text text-transparent z-20 mb-4 sm:mb-6">
+      <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-center bg-gradient-to-b from-neutral-300 to-neutral-500 bg-clip-text text-transparent z-20 mb-8 sm:mb-12">
         Tech Stack & Skills
       </h2>
 
-      {/* Prompts */}
-      <div className="z-20 mb-6 text-lg font-semibold text-center">
-        {/* Mobile: Tap Prompt */}
-        <p className="block sm:hidden bg-gradient-to-b from-neutral-300 to-neutral-500 bg-clip-text text-transparent">
-          Try tapping on the icons 🎵
-        </p>
-
-        {/* Desktop/Tablet: Hover Prompt */}
-        <p className="hidden sm:block bg-gradient-to-b from-neutral-300 to-neutral-500 bg-clip-text text-transparent">
-          Hover over the icons to hear a sound 🎵
-        </p>
-      </div>
-
-      {/* Icon Cards */}
-      <div className="relative z-20 flex justify-center gap-3 flex-wrap max-w-5xl w-full">
-      {icons.map((icon, index) => (
-        <CardSpotlight
-          key={index}
-          className="h-18 w-18 rounded-full flex items-center justify-center bg-black"
-          color={`rgb(${colors[index][0]}, ${colors[index][1]}, ${colors[index][2]})`}
-          onMouseEnter={() => handleMouseEnter(index)}
-          onClick={() => handleMouseEnter(index)}
-        >
-          <div className="relative z-20">
-            {icon}
+      {/* Skills Content */}
+      <div className="relative z-20 max-w-5xl w-full space-y-8 sm:space-y-10">
+        
+        {/* SKILLS Section */}
+        <div>
+          <h3 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 text-cyan-400">SKILLS</h3>
+          <div className="flex flex-wrap gap-2 sm:gap-3">
+            {['C', 'Java', 'Python', 'JavaScript', 'React', 'Spring Boot', 'Flask', 'Django', 'MySQL', 'Data Structures & Algorithms', 'Web Development', 'CI', 'Google Cloud (Vertex AI)', 'Large Language Models (LLMs)', 'REST APIs', 'OpenCV', 'Generative AI', 'NLP'].map(skill => (
+              <span 
+                key={skill} 
+                className="px-3 sm:px-4 py-1.5 sm:py-2 bg-neutral-800 rounded-md text-sm sm:text-base border border-neutral-700 hover:border-cyan-400 transition-colors text-gray-200 hover:shadow-lg hover:shadow-cyan-400/20"
+              >
+                {skill}
+              </span>
+            ))}
           </div>
-        </CardSpotlight>
-      ))}
+        </div>
+
+        {/* LEARNING Section */}
+        <div>
+          <h3 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 text-indigo-300">LEARNING</h3>
+          <div className="flex flex-wrap gap-2 sm:gap-3">
+            {['Advanced ML & DL', 'MLOps'].map(skill => (
+              <span 
+                key={skill} 
+                className="px-3 sm:px-4 py-1.5 sm:py-2 bg-neutral-800 rounded-md text-sm sm:text-base border border-neutral-700 hover:border-indigo-300 transition-colors text-gray-200 hover:shadow-lg hover:shadow-indigo-300/20"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* TOOLS & PLATFORMS Section */}
+        <div>
+          <h3 className="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 text-cyan-400">TOOLS & PLATFORMS</h3>
+          <div className="flex flex-wrap gap-2 sm:gap-3">
+            {['VS Code', 'Eclipse IDE', 'Postman', 'PyCharm', 'Google Colab', 'Docker', 'MATLAB', 'Git', 'GitHub', 'AWS'].map(platform => (
+              <span 
+                key={platform} 
+                className="px-3 sm:px-4 py-1.5 sm:py-2 bg-neutral-800 rounded-md text-sm sm:text-base border border-neutral-700 hover:border-cyan-400 transition-colors text-gray-200 hover:shadow-lg hover:shadow-cyan-400/20"
+              >
+                {platform}
+              </span>
+            ))}
+          </div>
+        </div>
+
       </div>
     </div>
   );
