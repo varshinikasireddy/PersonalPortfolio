@@ -68,19 +68,7 @@ const Navbar = () => {
 </button>
 
 
-          {/* Books & Resume next to logo */}
-          <a 
-            href="#" 
-            className="text-white hover:text-gray-300 transition-colors text-lg font-normal"
-          >
-            Books
-          </a>
-          <button 
-            onClick={() => navigate('/resume')}
-            className="text-white hover:text-gray-300 transition-colors text-lg font-normal"
-          >
-            Resume
-          </button>
+          
         </div>
       </nav>
 

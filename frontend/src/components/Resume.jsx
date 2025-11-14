@@ -10,7 +10,7 @@ const Resume = () => {
   return (
     <div className="relative min-h-screen bg-black pt-20 px-4 py-12">
       {/* Background Grid */}
-      <div className="absolute inset-0 [background-size:20px_20px] [background-image:radial-gradient(#404040_1px,transparent_1px)]" />
+
       
       {/* Radial Mask */}
       <div className="absolute inset-0 bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />

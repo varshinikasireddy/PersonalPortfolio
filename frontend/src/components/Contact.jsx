@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { cn } from "../lib/utils";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 import emailjs from "emailjs-com";
 
@@ -42,13 +41,7 @@ const Contact = () => {
   return (
     <section className="relative flex min-h-screen w-full flex-col items-center justify-center px-4 py-20 bg-black">
       {/* Background pattern */}
-      <div
-        className={cn(
-          "absolute inset-0 z-0",
-          "[background-size:20px_20px]",
-          "[background-image:radial-gradient(#404040_1px,transparent_1px)]"
-        )}
-      />
+
 
       {/* Radial mask overlay */}
       <div className="pointer-events-none absolute inset-0 z-10 bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
@@ -58,7 +51,7 @@ const Contact = () => {
         <h1 className="bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-5xl sm:text-7xl font-extrabold text-transparent">
           Connect with Me
         </h1>
-        <p className="mt-4 text-neutral-400 text-lg">Let’s chat — drop a message!</p>
+        <p className="mt-4 text-neutral-400 text-lg">Let’s build something great!</p>
 
         <form ref={formRef} onSubmit={sendEmail} className="mt-10 space-y-4">
           <input

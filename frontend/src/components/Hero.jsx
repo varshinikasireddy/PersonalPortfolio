@@ -10,13 +10,7 @@ const Hero = () => {
     <>
       <div className="relative flex min-h-[50rem] md:min-h-screen w-full items-center justify-center bg-black overflow-hidden px-4 py-16">
         {/* Dot Background */}
-        <div
-          className={cn(
-            "absolute inset-0",
-            "[background-size:20px_20px]",
-            "[background-image:radial-gradient(#404040_1px,transparent_1px)]"
-          )}
-        />
+
 
         {/* Radial Mask */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />

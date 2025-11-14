@@ -349,13 +349,7 @@ const LogBook = () => {
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden py-8">
-      <div
-        className={cn(
-          "absolute inset-0 z-0 pointer-events-none",
-          "[background-size:20px_20px]",
-          "[background-image:radial-gradient(#404040_1px,transparent_1px)]"
-        )}
-      />
+
       <div className="absolute inset-0 z-10 pointer-events-none bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

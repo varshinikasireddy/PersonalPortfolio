@@ -32,20 +32,13 @@ const Education = () => {
         <link rel="canonical" href="https://varshinikasireddy.vercel.app/education" />
       </Helmet>
       
-      {/* Background pattern */}
-      <div
-        className={cn(
-          "absolute inset-0",
-          "[background-size:20px_20px]",
-          "[background-image:radial-gradient(#404040_1px,transparent_1px)]"
-        )}
-      />
+
       {/* Faded radial gradient overlay */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
 
       {/* Content */}
       <div className="relative z-20 max-w-6xl w-full">
-        <h1 className="text-4xl sm:text-7xl font-bold bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent py-8 mb-16">
+        <h1 className="text-4xl sm:text-7xl font-bold bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent py-8 mb-16 text-left">
           Education.
         </h1>
 

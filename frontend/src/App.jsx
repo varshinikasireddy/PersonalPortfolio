@@ -6,6 +6,7 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Education from './components/Education';
+import Interests from './components/Interests';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
 import Skills from './components/Skills';
@@ -98,6 +99,9 @@ function App() {
                 </div>
                 <div id="education">
                   <Education />
+                </div>
+                <div id="interests">
+                  <Interests />
                 </div>
                 <div id="contact">
                   <Contact />
