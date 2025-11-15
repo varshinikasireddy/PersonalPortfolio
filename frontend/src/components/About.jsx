@@ -2,7 +2,7 @@ import React from 'react';
 import { cn } from "../lib/utils";
 import BlurImage from './utils/BlurImage';
 import { Helmet } from 'react-helmet-async';
-import profile from "../assets/profile.jpg";
+import profile from "../assets/profile.png";
 const About = () => {
   return (
     <section className="about-container relative flex min-h-[50rem] md:min-h-screen w-full items-center justify-center bg-black text-left py-20 px-4">
