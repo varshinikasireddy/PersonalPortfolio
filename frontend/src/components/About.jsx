@@ -46,16 +46,20 @@ const About = () => {
             About Me.
           </h1>
           <p className="text-lg leading-relaxed mb-4">
-            I’m Chaitanya Sai Meka, a passionate and driven developer with a strong foundation in software engineering and a keen interest in building impactful digital solutions. I thrive at the intersection of technology and creativity, with hands-on experience in full-stack development, UI/UX design, and collaborative team projects.
+            Hey, I'm Varshini!
+
+Welcome to my corner of the internet! I'm a CS student, multidisciplinary developer, and AI enthusiast who loves working across software engineering, artificial intelligence, and systems development. Passionate about problem-solving and continuous learning to stay updated with emerging technologies. Highly motivated to drive impactful results by integrating modern AI advancements into real-world applications.
+
           </p>
           <p className="text-lg leading-relaxed mb-4">
-            Currently pursuing my academic journey while actively working on personal and open-source projects, I continuously seek opportunities to learn and grow in real-world environments. I have a strong grasp of modern web technologies, especially React, and I enjoy solving complex problems with clean, efficient code.
+            I have hands-on experience across full-stack development, AI/ML, computer vision, NLP, and embedded systems. My projects include end-to-end web applications using React, Spring Boot, Flask, and MySQL, developed NLP-driven platforms and designing  autonomous prototypes involving OpenCV, sensors, and motor control. I enjoy integrating multiple technologies to solve complex problems rather than limiting myself to a single stack.
+
           </p>
           <p className="text-lg leading-relaxed mb-4">
-            I'm also exploring the early stages of a tech startup idea called <strong>Xeon</strong>, where I'm experimenting with innovative solutions and learning to translate abstract ideas into structured plans. This journey is helping me build my entrepreneurial mindset and sharpen my skills in product thinking, strategy, and leadership—even as the concept evolves through ideation and feedback.
+            Beyond technical depth, I value discipline, leadership, and continuous growth. As an NCC cadet, I bring accountability, and teamwork into every project. I also enjoy sharing knowledge through workshops and collaborative projects.
           </p>
           <p className="text-lg leading-relaxed">
-            My goal is to work on challenging projects, learn from experienced mentors, and make meaningful contributions to the tech community.
+            Currently, I’m exploring agentic AI systems while strengthening my foundations across software, AI, and autonomous technologies with the goal of growing into a well-rounded engineer capable of contributing to impactful, cross-disciplinary teams.
           </p>
         </div>
       </div>
