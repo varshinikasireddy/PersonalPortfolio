@@ -1,6 +1,6 @@
 import React from "react";
 import { FaGithub, FaFigma, FaExternalLinkAlt, FaReact, FaNodeJs, FaPython, FaJava, FaDocker, FaHtml5, FaCss3Alt, FaAws, FaSass } from 'react-icons/fa';
-import { SiMongodb, SiMysql, SiExpress, SiFlask, SiOpencv, SiStreamlit, SiSpringboot, SiPostgresql, SiTensorflow, SiTailwindcss, SiStrapi, SiFramer, SiNextdotjs, SiVercel, SiJavascript, SiTypescript } from 'react-icons/si';
+import { SiMongodb, SiMysql, SiExpress, SiFlask, SiOpencv, SiStreamlit, SiSpringboot, SiPostgresql, SiTensorflow, SiTailwindcss, SiStrapi, SiFramer, SiNextdotjs, SiVercel, SiJavascript, SiTypescript, SiDjango, SiSpringsecurity, SiJsonwebtokens, SiGooglegemini } from 'react-icons/si';
 import Lenis from 'lenis';
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
@@ -36,8 +36,13 @@ const getTechIcon = (tech) => {
     'Motion': <SiFramer className="text-[#0055FF]" />,
     'SASS': <FaSass className="text-[#CC6699]" />,
     'Vercel': <SiVercel className="text-white" />,
+    'Django': <SiDjango className="text-[#092E20]" />,
+    'Spring Security': <SiSpringsecurity className="text-[#6DB33F]" />,
+    'JWT': <SiJsonwebtokens className="text-[#000000]" />,
+    'Gemini': <SiGooglegemini className="text-[#4285F4]" />,
     'NLP': <span className="text-purple-400">🧠</span>,
     'OpenAI': <span className="text-emerald-400">🤖</span>,
+    'OCR': <span className="text-yellow-400">📄</span>,
     'GPS': <span className="text-blue-400">📍</span>,
   };
   return iconMap[tech] || null;
@@ -48,63 +53,27 @@ const getTechIcon = (tech) => {
 const projects = [
   {
     year: "2025",
-    title: "Text2SQL AI Assistant",
+    title: "Expense Tracker – Full Stack Finance Management Platform",
     description:
-      "Professional AI-powered chatbot that converts natural language to SQL queries with sleek UI, voice input support, and real-time DB interaction.",
-    link: "https://github.com/varshinikasireddy/text-to-sql",
+      "A comprehensive financial management platform enabling users to track expenses, manage budgets, and analyze spending patterns with intelligent automation.",
+    link: "https://github.com/yourusername/expense-tracker",
     liveDemo: "#",
     figma: "#",
     image: "/text2sql.png",
     blurhash:"L00000?b00Rj~qIU-;M{00M{M{of",
-    tech: ["Python", "Flask", "React", "MySQL", "OpenAI"]
+    tech: ["Java", "Spring Boot", "React", "TypeScript", "MySQL", "Spring Security", "JWT", "OCR"]
   },
   {
-    year: "2024",
-    title: "AI Chatbot",
+    year: "2025",
+    title: "SQLAI – AI-Powered SQL Assistant",
     description:
-      "Real-time NLP chatbot with React UI deployed on Vercel for intelligent conversations.",
-    link: "#",
+      "An intelligent developer tool that converts natural language prompts into optimized SQL queries using LLMs, with utilities for query optimization and analysis.",
+    link: "https://github.com/yourusername/sqlai",
     liveDemo: "#",
     figma: "#",
-    image: "/black_page.jpg",
+    image: "/text2sql.png",
     blurhash:"L00SvEayWAfQozfQayfQayfQf8fQ",
-    tech: ["React", "Node.js", "NLP", "Vercel"]
-  },
-  {
-    year: "2024",
-    title: "Automated Attendance System",
-    description:
-      "Face recognition application with Streamlit dashboard for rural schools using OpenCV.",
-    link: "#",
-    liveDemo: "#",
-    figma: "#",
-    image: "/black_page.jpg",
-    blurhash:"L00SvEayWAfQozfQayfQayfQf8fQ",
-    tech: ["Python", "OpenCV", "Streamlit"]
-  },
-  {
-    year: "2024",
-    title: "EV Subscription Platform",
-    description:
-      "Hackathon project with GPS live tracking and automated maintenance scheduling.",
-    link: "#",
-    liveDemo: "#",
-    figma: "#",
-    image: "/black_page.jpg",
-    blurhash:"L00SvEayWAfQozfQayfQayfQf8fQ",
-    tech: ["React", "Node.js", "MongoDB", "GPS API"]
-  },
-  {
-    year: "2024",
-    title: "E-commerce Platform",
-    description:
-      "Full-stack e-commerce application built during hackathon.",
-    link: "#",
-    liveDemo: "#",
-    figma: "#",
-    image: "/black_page.jpg",
-    blurhash:"L00SvEayWAfQozfQayfQayfQf8fQ",
-    tech: ["React", "Spring Boot", "MySQL"]
+    tech: ["Python", "Django", "React", "TypeScript", "MySQL", "OpenAI", "Gemini"]
   },
   {
     year: "2025",

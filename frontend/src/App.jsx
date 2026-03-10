@@ -10,6 +10,7 @@ import Interests from './components/Interests';
 import Resume from './components/Resume';
 import Footer from './components/Footer';
 import Skills from './components/Skills';
+import Experience from './components/Experience';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Helmet } from 'react-helmet-async';
 
@@ -93,6 +94,9 @@ function App() {
                 </div>
                 <div id="skills">
                   <Skills />
+                </div>
+                <div id="experience">
+                  <Experience />
                 </div>
                 <div id="projects">
                   <Projects />

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaGithub, FaLinkedin, FaCertificate } from 'react-icons/fa';
 
 const Resume = () => {
   const handleDownload = () => {
@@ -79,6 +79,66 @@ const Resume = () => {
           </div>
         </div>
 
+        {/* Experience */}
+        <div className="mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent mb-6">
+            Experience.
+          </h2>
+          
+          <div className="space-y-6">
+            <div className="border-l-4 border-neutral-700 pl-6 py-4 hover:border-cyan-400 transition-colors">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-3">
+                <div>
+                  <h3 className="text-xl font-semibold text-white">Software Engineering Job Simulation</h3>
+                  <p className="text-gray-300 text-lg">JPMorgan Chase & Co.</p>
+                  <p className="text-gray-400 text-sm italic">Forage Virtual Experience Program</p>
+                </div>
+                <div className="text-gray-400 mt-2 md:mt-0">
+                  <p>📅 March 2026</p>
+                </div>
+              </div>
+              
+              <div className="mt-4">
+                <h4 className="text-lg font-semibold text-cyan-400 mb-2">Project: MIDAS Core – Transaction Processing System</h4>
+                <p className="text-sm text-gray-400 mb-3">Tech Stack: Java, Spring Boot, Apache Kafka, Spring Data JPA, H2 SQL Database, REST API, Maven</p>
+                
+                <ul className="space-y-2 text-gray-300 text-sm">
+                  <li className="flex items-start">
+                    <span className="text-cyan-400 mr-2">•</span>
+                    <span>Integrated Kafka into a Spring Boot microservice to consume and deserialize high-volume transaction messages using a configurable topic and embedded Kafka test framework.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-cyan-400 mr-2">•</span>
+                    <span>Implemented transaction validation and persistence logic with Spring Data JPA and an H2 SQL database, including entity modeling and balance updates across relational User records.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-cyan-400 mr-2">•</span>
+                    <span>Connected the service to an external REST Incentive API using RestTemplate, processing incentive responses and incorporating them into transactional workflows.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-cyan-400 mr-2">•</span>
+                    <span>Developed a REST endpoint for querying user balances, returning JSON responses through a Spring controller while maintaining clean architectural boundaries.</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-cyan-400 mr-2">•</span>
+                    <span>Verified system behavior using Maven test suites and debugger-driven inspection, ensuring reliability across message ingestion, database operations, and external API interactions.</span>
+                  </li>
+                </ul>
+                
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <a href="https://www.theforage.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_yGLXq3nSCEWGSmBqt_1773071209208_completion_certificate.pdf" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm flex items-center gap-2">
+                    <FaCertificate /> View Certificate
+                  </a>
+                  <span className="text-gray-600 mx-1">|</span>
+                  <a href="https://github.com/yourusername/midas-core" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 text-sm flex items-center gap-2">
+                    <FaGithub /> View on GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Projects */}
         <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent mb-6">
@@ -86,26 +146,30 @@ const Resume = () => {
           </h2>
           <div className="space-y-6">
             <div className="border-l-4 border-neutral-700 pl-6 py-4 hover:border-cyan-400 transition-colors">
-              <h3 className="text-xl font-semibold text-white mb-2">Project Title 1</h3>
-              <p className="text-gray-300 mb-2">Brief description of your project and what technologies you used.</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Expense Tracker – Full Stack Finance Management Platform</h3>
+              <p className="text-gray-300 mb-2">A comprehensive financial management platform enabling users to track expenses, manage budgets, and analyze spending patterns.</p>
+              <ul className="space-y-1 text-gray-300 text-sm mb-2">
+               Implemented secure JWT-based authentication using Spring Security and BCrypt
+                Designed scalable REST APIs for expense, budget, and notification management using Spring Boot and Spring Data JPA
+                 Integrated MySQL relational database for structured financial data storage
+                Added OCR receipt processing using Tesseract.js and Google Vision API to automatically extract transaction details
+              </ul>
               <div className="flex flex-wrap gap-2">
-                <span className="text-sm text-cyan-400">• Tech Stack: React, Node.js, MongoDB</span>
+                <span className="text-sm text-cyan-400">• Tech Stack: Java, Spring Boot, React, TypeScript, MySQL, Spring Security, JWT</span>
               </div>
             </div>
 
             <div className="border-l-4 border-neutral-700 pl-6 py-4 hover:border-cyan-400 transition-colors">
-              <h3 className="text-xl font-semibold text-white mb-2">Project Title 2</h3>
-              <p className="text-gray-300 mb-2">Brief description of your project and what technologies you used.</p>
+              <h3 className="text-xl font-semibold text-white mb-2">SQLAI – AI-Powered SQL Assistant</h3>
+              <p className="text-gray-300 mb-2">An intelligent developer tool that converts natural language prompts into optimized SQL queries using LLMs.</p>
+              <ul className="space-y-1 text-gray-300 text-sm mb-2">
+                <li>• Integrated LLM APIs (OpenAI and Google Gemini) to generate SQL queries from natural language prompts</li>
+                <li>• Built Django REST APIs for SQL optimization, formatting, validation, and dialect conversion</li>
+                <li>• Developed an interactive React + TypeScript frontend with Material UI for real-time query generation</li>
+                <li>• Added CSV dataset analysis and MySQL database connectivity for testing queries on structured datasets</li>
+              </ul>
               <div className="flex flex-wrap gap-2">
-                <span className="text-sm text-cyan-400">• Tech Stack: Python, Flask, AI/ML</span>
-              </div>
-            </div>
-
-            <div className="border-l-4 border-neutral-700 pl-6 py-4 hover:border-cyan-400 transition-colors">
-              <h3 className="text-xl font-semibold text-white mb-2">Project Title 3</h3>
-              <p className="text-gray-300 mb-2">Brief description of your project and what technologies you used.</p>
-              <div className="flex flex-wrap gap-2">
-                <span className="text-sm text-cyan-400">• Tech Stack: Java, SpringBoot, MySQL</span>
+                <span className="text-sm text-cyan-400">• Tech Stack: Python, Django, React, TypeScript, MySQL, OpenAI API, Google Gemini</span>
               </div>
             </div>
           </div>
