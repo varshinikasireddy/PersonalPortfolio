@@ -6,21 +6,19 @@ import { Helmet } from 'react-helmet-async';
 const Experience = () => {
   const experiences = [
     {
-      role: "Software Engineering Job Simulation",
+      role: "Software Engineering Simulation Project",
       company: "JPMorgan Chase & Co.",
       type: "Forage Virtual Experience Program",
       period: "March 2026",
       project: {
         title: "MIDAS Core – Transaction Processing System",
-        techStack: ["Java", "Spring Boot", "Apache Kafka", "Spring Data JPA", "H2 SQL Database", "REST API", "Maven"],
+        techStack: ["Java", "Spring Boot", "Apache Kafka", "Spring Data JPA", "H2 Database", "REST API", "Maven"],
         description: [
-          "Integrated Kafka into a Spring Boot microservice to consume and deserialize high-volume transaction messages using a configurable topic and embedded Kafka test framework.",
-          "Implemented transaction validation and persistence logic with Spring Data JPA and an H2 SQL database, including entity modeling and balance updates across relational User records.",
-          "Connected the service to an external REST Incentive API using RestTemplate, processing incentive responses and incorporating them into transactional workflows.",
-          "Developed a REST endpoint for querying user balances, returning JSON responses through a Spring controller while maintaining clean architectural boundaries.",
-          "Verified system behavior using Maven test suites and debugger-driven inspection, ensuring reliability across message ingestion, database operations, and external API interactions."
+          "Built an event-driven microservice using Spring Boot and Apache Kafka to process high-volume transaction messages.",
+          "Implemented robust transaction validation and persistence using Spring Data JPA and an H2 SQL database.",
+          "Integrated an external REST Incentive API into the transaction workflow and developed a secure REST endpoint for user balance queries, validating reliability with Maven test suites."
         ],
-        github: "https://github.com/yourusername/midas-core",
+        github: "https://github.com/varshinikasireddy/midas-core",
         certificate: "https://www.theforage.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_yGLXq3nSCEWGSmBqt_1773071209208_completion_certificate.pdf"
       }
     }

@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
 
 /* Smooth Scrolling */
 html {
@@ -11,13 +10,37 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Global font family */
-* {
-  font-family: "Special Gothic Expanded One", sans-serif;
+/* Global font families: Outfit for headings, Inter for body */
+body, input, textarea, select, button {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .name-button, .nav-a, .actual-text, .hover-text-name {
+  font-family: 'Outfit', sans-serif;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.group:hover .tooltip {
+  opacity: 1;
+  transform: translate(-50%, -6px);
 }
 
 body {
-  font-family: "Special Gothic Expanded One", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 /* HERO TITLE */
@@ -58,7 +81,7 @@ body {
   letter-spacing: 3px;
   text-decoration: none;
   font-size: var(--fs-size);
-  font-family: "Special Gothic Expanded One", sans-serif;
+  font-family: 'Outfit', sans-serif;
   position: relative;
   text-transform: uppercase;
   color: transparent;

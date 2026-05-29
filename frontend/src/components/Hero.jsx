@@ -1,7 +1,7 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { SiLeetcode, SiCodeforces } from "react-icons/si";
+import { SiLeetcode, SiCodechef } from "react-icons/si";
 import { cn } from "../lib/utils";
 import { DrawLineText } from "./ui/draw_line_text";
 
@@ -18,10 +18,10 @@ const Hero = () => {
         <div className="relative z-20 text-center">
           <h1 className="text-4xl sm:text-7xl font-bold bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent py-8">
              Hi, I'm
-            <button className="name-button" data-text="Varshini kasireddy">
-              <span className="actual-text">&nbsp;Varshini kasireddy&nbsp;</span>
-              <span aria-hidden="true" className="hover-text-name">&nbsp;Varshini kasireddy&nbsp;</span>
-            </button>
+           <button className="name-button" data-text="Varshini Kasireddy">
+  <span className="actual-text">&nbsp;Varshini Kasireddy&nbsp;</span>
+  <span aria-hidden="true" className="hover-text-name">&nbsp;Varshini Kasireddy&nbsp;</span>
+</button>
           </h1>
 
           <svg width="0" height="0">
@@ -34,27 +34,26 @@ const Hero = () => {
           </svg>
 
           <h2 className="text-md md:text-xl lg:text-2xl text-neutral-300 mt-4">
-            Passionate Coder | AI & Software Developer{" "}
-            <span className="text-indigo-300 font-semibold typing-text">
-              <Typewriter
-                words={[
-                  "Building with Generative AI",
-                  "Crafting ML Solutions",
-                  "Developing Intelligent Chatbots",
-                  "Creating Text-to-SQL Systems",
-                  "Deploying Cloud Solutions",
-                  "Solving Real-World Problems",
-                ]}
-                loop={0}
-                cursor
-                cursorStyle="_"
-                typeSpeed={100}
-                deleteSpeed={80}
-                delaySpeed={1000}
-              />
-            </span>
-          </h2>
-
+  AI-Driven Full Stack Developer{" "}
+  <span className="text-indigo-300 font-semibold typing-text">
+    <Typewriter
+      words={[
+        "Building scalable web applications",
+        "Developing with Java & Spring Boot",
+        "Creating responsive UIs with React",
+        "Designing NLP-based systems",
+        "Working with Microservices & Kafka",
+        "Solving real-world problems",
+      ]}
+      loop={0}
+      cursor
+      cursorStyle="_"
+      typeSpeed={100}
+      deleteSpeed={80}
+      delaySpeed={1000}
+    />
+  </span>
+</h2>
           <div className="flex justify-center mt-8">
             <a
               href="#contact"
@@ -72,48 +71,74 @@ const Hero = () => {
             </a>
           </div>
 
-          <div className="flex justify-center gap-4 mt-8 text-2xl">
-            <a
-              href="https://github.com/varshinikasireddy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icon-circle hover:text-white transition"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://www.instagram.com/varshinikasireddy/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icon-circle hover:text-pink-600 transition"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://linkedin.com/in/varshinikasireddy"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icon-circle hover:text-blue-600 transition"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://leetcode.com/u/klu2300060019/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icon-circle hover:text-yellow-500 transition"
-            >
-              <SiLeetcode />
-            </a>
-            <a
-              href="https://codechef.com/users/klu2300060019"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="icon-circle hover:text-blue-400 transition"
-            >
-              <SiCodeforces />
-            </a>
-          </div>
+         <div className="flex justify-center gap-4 mt-8 text-2xl">
+
+  {/* GitHub */}
+  <div className="relative group">
+    <a
+      href="https://github.com/varshinikasireddy"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="icon-circle hover:text-white transition"
+    >
+      <FaGithub />
+    </a>
+    <span className="tooltip">GitHub</span>
+  </div>
+
+  {/* Instagram */}
+  <div className="relative group">
+    <a
+      href="https://www.instagram.com/varshinikasireddy/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="icon-circle hover:text-pink-600 transition"
+    >
+      <FaInstagram />
+    </a>
+    <span className="tooltip">Instagram</span>
+  </div>
+
+  {/* LinkedIn */}
+  <div className="relative group">
+    <a
+      href="https://linkedin.com/in/varshinikasireddy"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="icon-circle hover:text-blue-600 transition"
+    >
+      <FaLinkedin />
+    </a>
+    <span className="tooltip">LinkedIn</span>
+  </div>
+
+  {/* LeetCode */}
+  <div className="relative group">
+    <a
+      href="https://leetcode.com/u/klu2300060019/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="icon-circle hover:text-yellow-500 transition"
+    >
+      <SiLeetcode />
+    </a>
+    <span className="tooltip">LeetCode</span>
+  </div>
+
+  {/* CodeChef */}
+  <div className="relative group">
+    <a
+      href="https://codechef.com/users/klu2300060019"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="icon-circle hover:text-orange-500 transition"
+    >
+      <SiCodechef />
+    </a>
+    <span className="tooltip">CodeChef</span>
+  </div>
+
+</div>
         </div>
       </div>
     </>

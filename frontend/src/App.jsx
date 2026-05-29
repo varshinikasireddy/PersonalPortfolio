@@ -19,34 +19,32 @@ function App() {
     const warmUpServer = async () => {
       try {
         await fetch("https://portfolio-m60v.onrender.com/health");
-        console.log(" Backend warmed up");
+        console.log("Backend warmed up");
       } catch (err) {
         console.error("Backend warm-up failed:", err);
       }
     };
-
     warmUpServer();
   }, []);
 
   return (
     <>
-      {/* Global SEO Metadata */}
       <Helmet>
-        <title>Kasireddy Varshini | AI & Software Developer</title>
-        <meta name="description" content="Portfolio of Kasireddy Varshini, an AI & Software Developer skilled in Python, Java, React, and passionate about Generative AI, NLP, and ML. Explore projects and skills." />
+        <title>Kasireddy Varshini | Software Engineer & Full Stack Developer</title>
+        <meta name="description" content="Portfolio of Kasireddy Varshini, a Computer Science undergraduate (KL University, 2027) specialising in Java, Spring Boot, React, and distributed systems. Explore projects and skills." />
         <link rel="canonical" href="https://varshinikasireddy.vercel.app/" />
 
-        <meta property="og:title" content="Kasireddy Varshini | AI & Software Developer" />
-        <meta property="og:description" content="Portfolio of Kasireddy Varshini, an AI & Software Developer skilled in Python, Java, React, and passionate about Generative AI, NLP, and ML." />
+        <meta property="og:title" content="Kasireddy Varshini | Software Engineer" />
+        <meta property="og:description" content="Portfolio of Kasireddy Varshini — backend engineering, full-stack projects, microservices, and DSA. CGPA 9.48, KL University 2027." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://varshinikasireddy.vercel.app/" />
         <meta property="og:image" content="https://varshinikasireddy.vercel.app/profile_pic.png" />
-        <meta property="og:site_name" content="Kasireddy Varshini's Portfolio" />
+        <meta property="og:site_name" content="Kasireddy Varshini Portfolio" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@varshinikasireddy" />
-        <meta name="twitter:title" content="Kasireddy Varshini | AI & Software Developer" />
-        <meta name="twitter:description" content="Portfolio of Kasireddy Varshini, an AI & Software Developer skilled in Python, Java, React, and passionate about Generative AI, NLP, and ML." />
+        <meta name="twitter:title" content="Kasireddy Varshini | Software Engineer" />
+        <meta name="twitter:description" content="Portfolio of Kasireddy Varshini — backend engineering, full-stack projects, microservices, and DSA." />
         <meta name="twitter:image" content="https://varshinikasireddy.vercel.app/profile_pic.png" />
 
         <script type="application/ld+json">
@@ -63,17 +61,25 @@ function App() {
                 "https://leetcode.com/u/klu2300060019/",
                 "https://www.codechef.com/users/klu2300060019"
               ],
-              "jobTitle": "AI & Software Developer",
+              "jobTitle": "Software Engineer & Full Stack Developer",
               "worksFor": {
                 "@type": "Organization",
-                "name": "Student"
+                "name": "Student at KL University"
               },
               "alumniOf": {
                 "@type": "EducationalOrganization",
                 "name": "KL University"
               },
-              "image": "https://chaitanya-sai-meka.vercel.app/profile_pic.png",
-              "description": "Chaitanya Sai Meka is a passionate full-stack developer specializing in React and modern web technologies, with expertise in AI and machine learning, based in Rajamahendravaram, Andhra Pradesh, India."
+              "image": "https://varshinikasireddy.vercel.app/profile_pic.png",
+              "description": "Kasireddy Varshini is a Computer Science undergraduate at KL University (graduating 2027), experienced in building scalable backend services using Java, Spring Boot, REST APIs, and MySQL. She has developed microservices and event-driven systems with Apache Kafka, with a strong foundation in data structures, algorithms, and system design.",
+              "telephone": "+919121814955",
+              "email": "2300060019csit@gmail.com",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Vaddeswaram",
+                "addressRegion": "Andhra Pradesh",
+                "addressCountry": "IN"
+              }
             }
           `}
         </script>
@@ -86,30 +92,14 @@ function App() {
             <Route path="/resume" element={<Resume />} />
             <Route path="*" element={
               <>
-                <div id="home">
-                  <Hero />
-                </div>
-                <div id="about">
-                  <About />
-                </div>
-                <div id="skills">
-                  <Skills />
-                </div>
-                <div id="experience">
-                  <Experience />
-                </div>
-                <div id="projects">
-                  <Projects />
-                </div>
-                <div id="education">
-                  <Education />
-                </div>
-                <div id="interests">
-                  <Interests />
-                </div>
-                <div id="contact">
-                  <Contact />
-                </div>
+                <div id="home"><Hero /></div>
+                <div id="about"><About /></div>
+                <div id="skills"><Skills /></div>
+                <div id="experience"><Experience /></div>
+                <div id="projects"><Projects /></div>
+                <div id="education"><Education /></div>
+                <div id="interests"><Interests /></div>
+                <div id="contact"><Contact /></div>
               </>
             } />
           </Routes>

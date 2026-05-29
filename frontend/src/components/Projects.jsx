@@ -53,40 +53,34 @@ const getTechIcon = (tech) => {
 const projects = [
   {
     year: "2025",
-    title: "Expense Tracker – Full Stack Finance Management Platform",
-    description:
-      "A comprehensive financial management platform enabling users to track expenses, manage budgets, and analyze spending patterns with intelligent automation.",
-    link: "https://github.com/yourusername/expense-tracker",
-    liveDemo: "#",
-    figma: "#",
-    image: "/text2sql.png",
-    blurhash:"L00000?b00Rj~qIU-;M{00M{M{of",
-    tech: ["Java", "Spring Boot", "React", "TypeScript", "MySQL", "Spring Security", "JWT", "OCR"]
-  },
-  {
-    year: "2025",
-    title: "SQLAI – AI-Powered SQL Assistant",
-    description:
-      "An intelligent developer tool that converts natural language prompts into optimized SQL queries using LLMs, with utilities for query optimization and analysis.",
-    link: "https://github.com/yourusername/sqlai",
-    liveDemo: "#",
-    figma: "#",
-    image: "/text2sql.png",
-    blurhash:"L00SvEayWAfQozfQayfQayfQf8fQ",
-    tech: ["Python", "Django", "React", "TypeScript", "MySQL", "OpenAI", "Gemini"]
-  },
-  {
-    year: "2025",
-    title: "Coming Soon",
-    description:
-      "More exciting projects in development. Stay tuned!",
-    link: "",
+    title: "Expense Tracker – Personal Finance Management Platform",
+    description: [
+      "Built a full-stack expense management platform using Spring Boot and React to track expenses, manage budgets, and generate financial insights.",
+      "Implemented budget tracking and expense categorization features to help users analyze spending patterns.",
+      "Optimized MySQL queries and indexing for transaction retrieval by 35%, improving database performance and reducing response latency."
+    ],
+    link: "https://github.com/varshinikasireddy/expense-tracker",
     liveDemo: "",
     figma: "",
-    image: "/black_page.jpg",
-    blurhash:"L00SvEayWAfQozfQayfQayfQf8fQ",
-    tech: []
+    image: "/text2sql.png",
+    blurhash:"L00000?b00Rj~qIU-;M{00M{M{of",
+    tech: ["Spring Boot", "React", "TypeScript", "MySQL", "Java", "Spring Security", "JWT"]
   },
+  {
+    year: "2025",
+    title: "SQLAI – Natural Language to SQL Query Engine",
+    description: [
+      "Engineered an NLP-based pipeline in Python to convert natural language queries into validated SQL commands for automated database querying.",
+      "Integrated MySQL execution with caching to improve query performance and response time.",
+      "Implemented secure query generation with input sanitization and exception handling to prevent SQL injection."
+    ],
+    link: "https://github.com/varshinikasireddy/sqlai",
+    liveDemo: "",
+    figma: "",
+    image: "/text2sql.png",
+    blurhash:"L00SvEayWAfQozfQayfQayfQf8fQ",
+    tech: ["Python", "NLP", "MySQL"]
+  }
 ];
 
 
@@ -191,9 +185,16 @@ const Projects = () => {
                     </h3>
 
                     {/* DESCRIPTION */}
-                    <p className="text-neutral-400 text-sm leading-relaxed">
-                      {project.description}
-                    </p>
+                    <div className="space-y-3">
+                      {project.description.map((bullet, idx) => (
+                        <div key={idx} className="flex items-start gap-2.5">
+                          <span className="text-cyan-400 text-base mt-0.5">•</span>
+                          <p className="text-neutral-400 text-sm leading-relaxed text-left">
+                            {bullet}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
 
                     {/* BUTTONS */}
                     <div className="flex flex-wrap gap-2 pt-2">

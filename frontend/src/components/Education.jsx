@@ -5,22 +5,16 @@ import { Helmet } from 'react-helmet-async';
 const Education = () => {
   const education = [
     {
-      degree: "B.Tech in Computer Science & IT",
-      institution: "KL Deemed to be University",
-      duration: "07/2023 – present",
-      location: "Vaddeswaram, Guntur, Andhra Pradesh",
+      degree: "Bachelor of Science in Computer Science",
+      institution: "KL University",
+      duration: "Jul 2023 – Expected May 2027",
+      location: "Vaddeswaram, Andhra Pradesh (CGPA: 9.48 / 10.00)",
     },
     {
-      degree: "Higher Secondary Education",
-      institution: "Vidyanikethan International School",
-      duration: "08/2021 – 05/2023",
-      location: "Tirupati, Andhra Pradesh",
-    },
-    {
-      degree: "Secondary Education",
-      institution: "AP Model School",
-      duration: "2019 – 2021",
-      location: "Thimmareddypalem, Andhra Pradesh",
+      degree: "Senior Secondary (CBSE – MPC)",
+      institution: "Sree Vidyanikethan International School",
+      duration: "2021 – 2023",
+      location: "Tirupati, Andhra Pradesh (SCORE: 85%)",
     },
   ];
 
