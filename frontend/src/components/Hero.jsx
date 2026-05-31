@@ -1,9 +1,50 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Typewriter } from "react-simple-typewriter";
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { SiLeetcode, SiCodechef } from "react-icons/si";
 import { cn } from "../lib/utils";
 import { DrawLineText } from "./ui/draw_line_text";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Animated Counter Component
+const AnimatedCounter = ({ end, suffix = "", decimals = 0 }) => {
+  const countRef = useRef(null);
+  const [hasAnimated, setHasAnimated] = useState(false);
+
+  useEffect(() => {
+    const element = countRef.current;
+    if (!element) return;
+
+    const obj = { value: 0 };
+
+    const trigger = ScrollTrigger.create({
+      trigger: element,
+      onEnter: () => {
+        if (!hasAnimated) {
+          gsap.to(obj, {
+            value: end,
+            duration: 2.5,
+            ease: "power2.out",
+            onUpdate: () => {
+              element.textContent = 
+                decimals > 0 
+                  ? obj.value.toFixed(decimals) 
+                  : Math.floor(obj.value) + suffix;
+            },
+          });
+          setHasAnimated(true);
+        }
+      },
+    });
+
+    return () => trigger.kill();
+  }, [end, suffix, decimals, hasAnimated]);
+
+  return <span ref={countRef}>0{suffix}</span>;
+};
 
 const Hero = () => {
   return (
@@ -34,16 +75,16 @@ const Hero = () => {
           </svg>
 
           <h2 className="text-md md:text-xl lg:text-2xl text-neutral-300 mt-4">
-  AI-Driven Full Stack Developer{" "}
+  Full Stack Developer · AI Engineer{" "}
   <span className="text-indigo-300 font-semibold typing-text">
     <Typewriter
       words={[
-        "Building scalable web applications",
+        "Building scalable backend services",
         "Developing with Java & Spring Boot",
         "Creating responsive UIs with React",
-        "Designing NLP-based systems",
+        "Engineering RAG pipelines with LLMs",
+        "Automating workflows with n8n & AI agents",
         "Working with Microservices & Kafka",
-        "Solving real-world problems",
       ]}
       loop={0}
       cursor
@@ -86,19 +127,6 @@ const Hero = () => {
     <span className="tooltip">GitHub</span>
   </div>
 
-  {/* Instagram */}
-  <div className="relative group">
-    <a
-      href="https://www.instagram.com/varshinikasireddy/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="icon-circle hover:text-pink-600 transition"
-    >
-      <FaInstagram />
-    </a>
-    <span className="tooltip">Instagram</span>
-  </div>
-
   {/* LinkedIn */}
   <div className="relative group">
     <a
@@ -138,7 +166,48 @@ const Hero = () => {
     <span className="tooltip">CodeChef</span>
   </div>
 
+  {/* Instagram */}
+  <div className="relative group">
+    <a
+      href="https://www.instagram.com/varshinikasireddy_/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="icon-circle hover:text-pink-600 transition"
+    >
+      <FaInstagram />
+    </a>
+    <span className="tooltip">Instagram</span>
+  </div>
+
 </div>
+
+        {/* STATS SECTION */}
+        <div className="flex justify-center gap-12 md:gap-20 mt-12 flex-wrap">
+          <div className="text-center">
+            <h3 className="text-3xl md:text-4xl font-black text-transparent bg-gradient-to-b from-neutral-200 to-neutral-400 bg-clip-text">
+              <AnimatedCounter end={450} suffix="+" />
+            </h3>
+            <p className="text-neutral-400 text-sm md:text-base mt-2">Problems Solved</p>
+          </div>
+          <div className="text-center">
+            <h3 className="text-3xl md:text-4xl font-black text-transparent bg-gradient-to-b from-neutral-200 to-neutral-400 bg-clip-text">
+              <AnimatedCounter end={5} suffix="+" />
+            </h3>
+            <p className="text-neutral-400 text-sm md:text-base mt-2">Projects Built</p>
+          </div>
+          <div className="text-center">
+            <h3 className="text-3xl md:text-4xl font-black text-transparent bg-gradient-to-b from-neutral-200 to-neutral-400 bg-clip-text">
+              <AnimatedCounter end={50} suffix="+" />
+            </h3>
+            <p className="text-neutral-400 text-sm md:text-base mt-2">Students Mentored</p>
+          </div>
+          <div className="text-center">
+            <h3 className="text-3xl md:text-4xl font-black text-transparent bg-gradient-to-b from-neutral-200 to-neutral-400 bg-clip-text">
+              <AnimatedCounter end={9.48} decimals={2} />
+            </h3>
+            <p className="text-neutral-400 text-sm md:text-base mt-2">CGPA</p>
+          </div>
+        </div>
         </div>
       </div>
     </>

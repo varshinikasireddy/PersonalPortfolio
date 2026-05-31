@@ -44,6 +44,12 @@ const getTechIcon = (tech) => {
     'OpenAI': <span className="text-emerald-400">🤖</span>,
     'OCR': <span className="text-yellow-400">📄</span>,
     'GPS': <span className="text-blue-400">📍</span>,
+    'n8n': <span className="text-[#FF6C5C] font-semibold text-[10px]">n8n</span>,
+    'Groq LLM': <span className="text-[#F25F4C] font-semibold text-[10px]">Groq</span>,
+    'ChromaDB': <span className="text-cyan-400">📊</span>,
+    'Vector Search': <span className="text-pink-400">🔍</span>,
+    'AI Agents': <span className="text-indigo-400">🤖</span>,
+    'Workflow Automation': <span className="text-emerald-400">⚡</span>,
   };
   return iconMap[tech] || null;
 };
@@ -53,18 +59,18 @@ const getTechIcon = (tech) => {
 const projects = [
   {
     year: "2025",
-    title: "Expense Tracker – Personal Finance Management Platform",
+    title: "End-to-End RAG Pipeline – AI/LLM Project",
     description: [
-      "Built a full-stack expense management platform using Spring Boot and React to track expenses, manage budgets, and generate financial insights.",
-      "Implemented budget tracking and expense categorization features to help users analyze spending patterns.",
-      "Optimized MySQL queries and indexing for transaction retrieval by 35%, improving database performance and reducing response latency."
+      "Engineered a complete Retrieval-Augmented Generation (RAG) system with semantic search over structured JSON documents.",
+      "Implemented high-performance document chunking, custom embeddings using Sentence Transformers, and local vector storage with ChromaDB.",
+      "Integrated Groq API for rapid inference, generating accurate, context-grounded answers based on retrieved document segments."
     ],
-    link: "https://github.com/varshinikasireddy/expense-tracker",
+    link: "https://github.com/varshinikasireddy/rag-pipeline",
     liveDemo: "",
     figma: "",
     image: "/text2sql.png",
     blurhash:"L00000?b00Rj~qIU-;M{00M{M{of",
-    tech: ["Spring Boot", "React", "TypeScript", "MySQL", "Java", "Spring Security", "JWT"]
+    tech: ["Python", "Groq LLM", "ChromaDB", "Vector Search"]
   },
   {
     year: "2025",
@@ -137,7 +143,7 @@ const Projects = () => {
       {/* PROJECT LIST */}
       <div className="relative z-10 max-w-6xl w-full space-y-20">
 
-        {projects.map((project, index) => (
+        {projects.slice(0, 2).map((project, index) => (
           <div key={index} className="group relative">
 
             {/* FLOATING TECH BADGES */}

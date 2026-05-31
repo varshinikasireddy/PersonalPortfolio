@@ -45,7 +45,7 @@ const About = () => {
 </p>
 
 <p className="text-lg leading-relaxed mb-4">
-  I work across full-stack development with hands-on experience in Java, Spring Boot, React, and databases like MySQL and MongoDB. I have a strong foundation in data structures, object-oriented programming, and system design, and I enjoy applying these concepts to solve real-world problems.
+  I work across full-stack development with hands-on experience in Java, Spring Boot, Python, and React, and databases like MySQL and PostgreSQL. I have a strong foundation in data structures, object-oriented programming, and system design, and I enjoy applying these concepts to solve real-world problems.
 </p>
 
 <p className="text-lg leading-relaxed mb-4">

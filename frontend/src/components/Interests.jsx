@@ -5,66 +5,48 @@ import { Helmet } from 'react-helmet-async';
 const Interests = () => {
   const interests = [
     {
-      title: "Hackathons & Competitions",
-      description: "Solving real-world problems through competitive coding.",
-      icon: "🏆",
-      bgColor: "bg-[#FEF3E2]/10",
-      borderColor: "border-[#FEF3E2]/20",
-      hoverBorder: "hover:border-[#FEF3E2]/50",
-      hoverShadow: "hover:shadow-[#FEF3E2]/20"
-    },
-    {
-      title: "AI & Machine Learning",
-      description: "Exploring artificial intelligence and deep learning frameworks.",
+      title: "Exploring RAG & LLM Workflows",
+      description: "Experimenting practically with vector databases (ChromaDB), semantic embeddings, document processing, and Groq LLM pipelines to ground generative AI outputs.",
       icon: "🤖",
-      bgColor: "bg-[#E2F0F9]/10",
-      borderColor: "border-[#E2F0F9]/20",
-      hoverBorder: "hover:border-[#E2F0F9]/50",
-      hoverShadow: "hover:shadow-[#E2F0F9]/20"
+      bgColor: "bg-blue-500/5",
+      borderColor: "border-blue-500/10",
+      hoverBorder: "hover:border-blue-500/30",
+      hoverShadow: "hover:shadow-blue-500/10"
     },
     {
-      title: "Reading & Learning",
-      description: "Tech books, self-improvement, and continuous skill development.",
-      icon: "📚",
-      bgColor: "bg-[#F4E8FF]/10",
-      borderColor: "border-[#F4E8FF]/20",
-      hoverBorder: "hover:border-[#F4E8FF]/50",
-      hoverShadow: "hover:shadow-[#F4E8FF]/20"
+      title: "Backend Scaling & API Design",
+      description: "Studying the fundamentals of distributed systems, event streaming with Kafka, database query indexing, and building clean Spring Boot microservices.",
+      icon: "⚙️",
+      bgColor: "bg-emerald-500/5",
+      borderColor: "border-emerald-500/10",
+      hoverBorder: "hover:border-emerald-500/30",
+      hoverShadow: "hover:shadow-emerald-500/10"
     },
     {
-      title: "Open Source Contribution",
-      description: "Contributing to community projects and knowledge sharing.",
-      icon: "🌐",
-      bgColor: "bg-[#E8F7E3]/10",
-      borderColor: "border-[#E8F7E3]/20",
-      hoverBorder: "hover:border-[#E8F7E3]/50",
-      hoverShadow: "hover:shadow-[#E8F7E3]/20"
-    },
-    {
-      title: "UI/UX Design",
-      description: "Creating beautiful, modern, and user-friendly interfaces.",
-      icon: "🎨",
-      bgColor: "bg-[#FFE5EC]/10",
-      borderColor: "border-[#FFE5EC]/20",
-      hoverBorder: "hover:border-[#FFE5EC]/50",
-      hoverShadow: "hover:shadow-[#FFE5EC]/20"
-    },
-    {
-      title: "Problem Solving",
-      description: "Logical reasoning through puzzles and algorithmic challenges.",
+      title: "Algorithmic Problem Solving",
+      description: "Keeping my core analytical thinking and algorithmic complexity logic sharp by solving structured data structures challenges on LeetCode.",
       icon: "🧩",
-      bgColor: "bg-[#E0F4FF]/10",
-      borderColor: "border-[#E0F4FF]/20",
-      hoverBorder: "hover:border-[#E0F4FF]/50",
-      hoverShadow: "hover:shadow-[#E0F4FF]/20"
+      bgColor: "bg-amber-500/5",
+      borderColor: "border-amber-500/10",
+      hoverBorder: "hover:border-amber-500/30",
+      hoverShadow: "hover:shadow-amber-500/10"
+    },
+    {
+      title: "NCC Cadet Discipline",
+      description: "Fostering strong team communication, personal integrity, and structural reliability under pressure through active service in the National Cadet Corps.",
+      icon: "🎖️",
+      bgColor: "bg-purple-500/5",
+      borderColor: "border-purple-500/10",
+      hoverBorder: "hover:border-purple-500/30",
+      hoverShadow: "hover:shadow-purple-500/10"
     }
   ];
 
   return (
-    <section className="relative flex min-h-[50rem] md:min-h-screen w-full items-center justify-center bg-black py-20 px-4">
+    <section className="relative flex min-h-[40rem] md:min-h-screen w-full items-center justify-center bg-black py-24 px-4">
       <Helmet>
         <title>Interests | Kasireddy Varshini</title>
-        <meta name="description" content="Interests and passions of Kasireddy Varshini - Hackathons, AI exploration, open-source contributions, and logical reasoning." />
+        <meta name="description" content="Genuine technical interests of Kasireddy Varshini - RAG pipelines, Backend Design, LeetCode optimization, and NCC Cadet leadership." />
         <link rel="canonical" href="https://varshinikasireddy.vercel.app/interests" />
       </Helmet>
       
@@ -84,35 +66,37 @@ const Interests = () => {
         <h1 className="text-4xl sm:text-7xl font-bold bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent py-8 mb-4 text-left">
           Interests.
         </h1>
-        <p className="text-neutral-400 text-sm md:text-base text-left mb-12 max-w-3xl">
-          I love spending my free time exploring creative and technical hobbies that keep me inspired and curious. These interests shape the way I think, build, and design.
+        <p className="text-neutral-400 text-sm md:text-base text-left mb-12 max-w-3xl leading-relaxed">
+          What I genuinely spend time on outside of coursework — building, learning, and exploring across systems engineering and AI.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {interests.map((interest, index) => (
             <div
               key={index}
               className={cn(
-                "group relative rounded-xl p-6 transition-all duration-300",
+                "group relative rounded-2xl p-6 transition-all duration-300",
                 interest.bgColor,
-                "border-2",
+                "border bg-neutral-900/20 backdrop-blur-md",
                 interest.borderColor,
                 interest.hoverBorder,
-                "hover:shadow-lg",
+                "hover:shadow-xl",
                 interest.hoverShadow,
-                "hover:scale-105 hover:-translate-y-1"
+                "hover:scale-[1.01] hover:-translate-y-0.5"
               )}
             >
-              <div className="flex flex-col items-center text-center gap-3">
-                <div className="text-5xl group-hover:scale-110 transition-transform duration-300">
+              <div className="flex gap-5 items-start">
+                <div className="text-4xl p-3 bg-neutral-950/60 rounded-xl group-hover:scale-110 transition-transform duration-300 border border-neutral-900">
                   {interest.icon}
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-neutral-200">
-                  {interest.title}
-                </h3>
-                <p className="text-neutral-400 text-sm leading-relaxed">
-                  {interest.description}
-                </p>
+                <div className="space-y-2 text-left">
+                  <h3 className="text-lg sm:text-xl font-bold text-neutral-200">
+                    {interest.title}
+                  </h3>
+                  <p className="text-neutral-400 text-sm leading-relaxed">
+                    {interest.description}
+                  </p>
+                </div>
               </div>
             </div>
           ))}

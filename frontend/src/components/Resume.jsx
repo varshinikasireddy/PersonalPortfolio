@@ -48,22 +48,26 @@ const Resume = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-neutral-950/40 border border-neutral-900 rounded-xl p-6">
             <div>
               <h3 className="text-sm font-bold tracking-wider text-cyan-400 uppercase mb-3">Programming</h3>
-              <p className="text-neutral-300 text-sm">Java, Python, SQL, JavaScript</p>
+              <p className="text-neutral-300 text-sm">Java, Python, SQL, JavaScript, TypeScript</p>
             </div>
             <div>
               <h3 className="text-sm font-bold tracking-wider text-cyan-400 uppercase mb-3">Frameworks</h3>
               <p className="text-neutral-300 text-sm">Spring Boot, React, REST API Development, Microservices, MVC</p>
             </div>
             <div className="border-t border-neutral-900 pt-4 md:border-t-0 md:pt-0">
+              <h3 className="text-sm font-bold tracking-wider text-cyan-400 uppercase mb-3">AI / LLM / GenAI</h3>
+              <p className="text-neutral-300 text-sm">RAG Pipelines, Prompt Engineering, Groq LLM, ChromaDB, Vector Databases, Sentence Transformers, Semantic Search, n8n AI Workflow Automation</p>
+            </div>
+            <div className="border-t border-neutral-900 pt-4 md:border-t-0 md:pt-0">
               <h3 className="text-sm font-bold tracking-wider text-cyan-400 uppercase mb-3">Databases</h3>
               <p className="text-neutral-300 text-sm">MySQL, Database Design, Query Optimization, Indexing</p>
             </div>
-            <div className="border-t border-neutral-900 pt-4 md:border-t-0 md:pt-0">
+            <div className="border-t border-neutral-900 pt-4">
               <h3 className="text-sm font-bold tracking-wider text-cyan-400 uppercase mb-3">Tools & Platforms</h3>
               <p className="text-neutral-300 text-sm">Git, GitHub, Postman, Maven, Apache Kafka, Docker, AWS</p>
             </div>
-            <div className="col-span-1 md:col-span-2 border-t border-neutral-900 pt-4">
-              <h3 className="text-sm font-bold tracking-wider text-cyan-400 uppercase mb-3">Concepts</h3>
+            <div className="border-t border-neutral-900 pt-4">
+              <h3 className="text-sm font-bold tracking-wider text-cyan-400 uppercase mb-3">Core CS Concepts</h3>
               <p className="text-neutral-300 text-sm">Data Structures & Algorithms, OOP, System Design, Distributed Systems, REST APIs, Multithreading</p>
             </div>
           </div>
@@ -126,30 +130,59 @@ const Resume = () => {
             Technical Projects.
           </h2>
           <div className="space-y-6">
-            {/* Expense Tracker */}
+            {/* RAG Pipeline */}
             <div className="border-l-2 border-neutral-800 pl-6 py-2 hover:border-cyan-400 transition-colors bg-neutral-950/20 rounded-r-lg p-4">
               <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
-                <h3 className="text-lg font-bold text-white">Expense Tracker – Personal Finance Management Platform</h3>
+                <h3 className="text-lg font-bold text-white">End-to-End RAG Pipeline – AI/LLM Project</h3>
                 <span className="text-neutral-400 text-xs mt-1 bg-neutral-900 px-2.5 py-1 rounded">2025</span>
               </div>
-              <p className="text-xs text-neutral-500 mb-3">Tech Stack: Java, Spring Boot, React, TypeScript, MySQL, Spring Security, JWT</p>
+              <p className="text-xs text-neutral-500 mb-3">Tech Stack: Python, Groq LLM, ChromaDB, Sentence Transformers, Vector Search, JSON</p>
               
               <ul className="space-y-2 text-neutral-300 text-sm">
                 <li className="flex items-start">
                   <span className="text-cyan-400 mr-2 mt-1">•</span>
-                  <span>Built a full-stack expense management platform using Spring Boot and React to track expenses, manage budgets, and generate financial insights.</span>
+                  <span>Engineered a complete Retrieval-Augmented Generation (RAG) system with semantic search over structured JSON documents.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-cyan-400 mr-2 mt-1">•</span>
-                  <span>Implemented budget tracking and expense categorization features to help users analyze spending patterns.</span>
+                  <span>Implemented high-performance document chunking, custom embeddings using Sentence Transformers, and local vector storage with ChromaDB.</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-cyan-400 mr-2 mt-1">•</span>
-                  <span>Optimized MySQL queries and indexing for transaction retrieval by 35%, improving database performance and reducing response latency.</span>
+                  <span>Integrated Groq API for rapid inference, generating accurate, context-grounded answers based on retrieved document segments.</span>
                 </li>
               </ul>
               <div className="mt-3 text-xs">
-                <a href="https://github.com/varshinikasireddy/expense-tracker" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 inline-flex items-center gap-1 transition-colors">
+                <a href="https://github.com/varshinikasireddy/rag-pipeline" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 inline-flex items-center gap-1 transition-colors">
+                  <FaGithub /> View on GitHub
+                </a>
+              </div>
+            </div>
+
+            {/* n8n Automation */}
+            <div className="border-l-2 border-neutral-800 pl-6 py-2 hover:border-cyan-400 transition-colors bg-neutral-950/20 rounded-r-lg p-4">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                <h3 className="text-lg font-bold text-white">Quadratic AI – n8n Workflow Automation Project</h3>
+                <span className="text-neutral-400 text-xs mt-1 bg-neutral-900 px-2.5 py-1 rounded">2025</span>
+              </div>
+              <p className="text-xs text-neutral-500 mb-3">Tech Stack: n8n, AI Agents, API Integrations, Workflow Automation</p>
+              
+              <ul className="space-y-2 text-neutral-300 text-sm">
+                <li className="flex items-start">
+                  <span className="text-cyan-400 mr-2 mt-1">•</span>
+                  <span>Designed and deployed complex automated workflows in n8n featuring intelligent task orchestration and AI node integrations.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-cyan-400 mr-2 mt-1">•</span>
+                  <span>Built agentic pipelines that automate repetitive developer tasks, connecting vector stores, LLMs, and external API toolkits.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-cyan-400 mr-2 mt-1">•</span>
+                  <span>Streamlined continuous data processing workflows, reducing manual engineering tasks and optimizing task pipelines.</span>
+                </li>
+              </ul>
+              <div className="mt-3 text-xs">
+                <a href="https://github.com/varshinikasireddy/ai-workflow-automation" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 inline-flex items-center gap-1 transition-colors">
                   <FaGithub /> View on GitHub
                 </a>
               </div>
@@ -179,6 +212,35 @@ const Resume = () => {
               </ul>
               <div className="mt-3 text-xs">
                 <a href="https://github.com/varshinikasireddy/sqlai" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 inline-flex items-center gap-1 transition-colors">
+                  <FaGithub /> View on GitHub
+                </a>
+              </div>
+            </div>
+
+            {/* Expense Tracker */}
+            <div className="border-l-2 border-neutral-800 pl-6 py-2 hover:border-cyan-400 transition-colors bg-neutral-950/20 rounded-r-lg p-4">
+              <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                <h3 className="text-lg font-bold text-white">Expense Tracker – Personal Finance Management Platform</h3>
+                <span className="text-neutral-400 text-xs mt-1 bg-neutral-900 px-2.5 py-1 rounded">2025</span>
+              </div>
+              <p className="text-xs text-neutral-500 mb-3">Tech Stack: Java, Spring Boot, React, TypeScript, MySQL, Spring Security, JWT</p>
+              
+              <ul className="space-y-2 text-neutral-300 text-sm">
+                <li className="flex items-start">
+                  <span className="text-cyan-400 mr-2 mt-1">•</span>
+                  <span>Built a full-stack expense management platform using Spring Boot and React to track expenses, manage budgets, and generate financial insights.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-cyan-400 mr-2 mt-1">•</span>
+                  <span>Implemented budget tracking and expense categorization features to help users analyze spending patterns.</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-cyan-400 mr-2 mt-1">•</span>
+                  <span>Optimized MySQL queries and indexing for transaction retrieval by 35%, improving database performance and reducing response latency.</span>
+                </li>
+              </ul>
+              <div className="mt-3 text-xs">
+                <a href="https://github.com/varshinikasireddy/expense-tracker" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:text-cyan-300 inline-flex items-center gap-1 transition-colors">
                   <FaGithub /> View on GitHub
                 </a>
               </div>
