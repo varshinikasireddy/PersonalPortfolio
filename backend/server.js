@@ -10,7 +10,10 @@ const app = express();
 const PORT = process.env.PORT;
 
 
-app.use(cors("https://chaitanya-sai-meka.vercel.app/"))
+app.use(cors({
+  origin: ["https://varshinikasireddy.vercel.app", "http://localhost:5173", "http://localhost:3000"],
+  credentials: true
+}));
 app.use(express.json());
 
 const pool = new Pool({
